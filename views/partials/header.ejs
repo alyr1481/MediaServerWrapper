@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Make site responsive on mobile/tablet -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Alex's Media Server</title>
+
+    <!-- BootStrap Inits -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/stylesheets/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/Al-Tech-LOGO.png" />
+
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="/stylesheets/croppie/croppie.css">
+    <script type="text/javascript" src="/js/croppie/croppie.min.js"></script>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-toggleable-md navbar-dark bg-primary scrolling-navbar fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <strong>Alex's Media Server</strong>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/sonarr">Sonarr</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/radarr">Radarr</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sabnzbd">SABnzbd</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/plex">Plex</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/emby">emby</a>
+          </li>   
+          <li class="nav-item dropdown btn-group">
+        </ul>
+          <a class="nav-item nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
+          <a class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">Register</a>
+      </div>
+    </nav>
+
+    <%if(error || success){%>
+      <div class="container">
+        <% if(error && error.length > 0){ %>
+          <div class="alert alert-danger" role="alert">
+            <%= error %>
+          </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+          <div class="alert alert-success" role="alert">
+            <%= success %>
+          </div>
+        <% } %>
+      </div>
+    <%}%>  
+
